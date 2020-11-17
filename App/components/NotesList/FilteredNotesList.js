@@ -4,7 +4,7 @@ import commonStyles, { stylesList } from '../../utils/commonStyles';
 import { FlatList } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export default function NotesListContainer({navigation}) {
+export default function FilteredNotesList({navigation}) {
 
     const [notesList, setNotesList] = useState([{task:"Read type Guidelines", status:"done"},{task:"Complete Responsive Design", status:"done"}, {task:"Bring Grocereis", status:"notdone"}]);
 
@@ -12,7 +12,7 @@ export default function NotesListContainer({navigation}) {
         <View style={commonStyles.flex1}>
             <View style={commonStyles.flexPont85}>
                 <View style={stylesList().notesListHeaderView}>
-                    <Text style={stylesList().notesListHeaderText}>Today's </Text>
+                    <Text style={stylesList().notesListHeaderText}>Pending </Text>
                     <Text style={stylesList().notesListHeaderText}>list - </Text>
                 </View>
                 <FlatList

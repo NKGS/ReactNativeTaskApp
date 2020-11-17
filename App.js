@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
@@ -23,11 +23,12 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Routes from './App/navigation/routes';
+import Navigation from './App/navigation/index';
 
 const App: () => React$Node = () => {
   return (
-   <Routes/>
+  <Navigation
+  />
   );
 };
 

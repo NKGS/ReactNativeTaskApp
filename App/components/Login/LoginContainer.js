@@ -3,20 +3,18 @@ import {  KeyboardAvoidingView, TouchableWithoutFeedback, View, Keyboard, Scroll
 import { stylesList } from '../../utils/commonStyles';
 import Login from './Login';
 import Register from './Register';
-import { Actions } from 'react-native-router-flux';
 
-export default function LoginContainer() {
+export default function LoginContainer({ navigation }) {
 
     const [isLoginScreen, setIsLogin] = useState(true)
     const [emailId, setEmailId] = useState('');
     const [password, setPassword] = useState('');
 
-
-    onLoginClick = () => {
-        Actions.push("NotesListContainer")
+    const onLoginClick = () => {
+        navigation.navigate('NotesListContainer')
     }
 
-    onRegisterClick = () => {
+    const onRegisterClick = () => {
         alert("User addedd successfullly!!")
     }
 
@@ -32,8 +30,8 @@ export default function LoginContainer() {
                     <View style={stylesList().mainView}>
                         {
                          isLoginScreen ? 
-                         <Login register={() => setIsLogin(false)} onLoginClick={() => this.onLoginClick()} /> : 
-                         <Register login={() => setIsLogin(true)} onRegisterClick={() => this.onRegisterClick() } /> 
+                         <Login register={() => setIsLogin(false)} onLoginClick={() => onLoginClick()} emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} /> : 
+                         <Register login={() => setIsLogin(true)} onRegisterClick={() => onRegisterClick() } /> 
                         }
                     </View>
                 </ScrollView>
