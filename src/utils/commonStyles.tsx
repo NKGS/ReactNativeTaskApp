@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 export default {
     headerTextStyle: { 
-        fontSize: 20, fontWeight: 'bold', color: '#3B3B3B' 
+        fontSize: 20, color: '#3B3B3B'
     },
     mediumText: { 
         fontSize: 12, color: '#3B3B3B' 
@@ -10,13 +10,13 @@ export default {
         borderWidth: 1, borderRadius: 8, marginVertical: 8, borderColor: '#F8CA31' 
     },
     loginBtnView: { 
-        height: 58, maxHeight: 50, marginVertical: 18, borderRadius:8, backgroundColor: '#F8CA31', alignItems: "center", justifyContent: "center" 
+        height: 58, maxHeight: 50, marginVertical: 18, borderRadius:8, backgroundColor: '#F8CA31'
     },
     btnTextStyle: { 
         fontSize: 14, color: 'white' 
     },
     userRegisterTextStyle:{ 
-        fontSize: 13, color: '#3B3B3B', fontWeight: 'bold', borderBottomWidth: 1 
+        fontSize: 13, color: '#3B3B3B',  borderBottomWidth: 1 
     },
     navigationBarTitleStyle: {
         // centering for Android

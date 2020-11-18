@@ -2,9 +2,10 @@ import React from 'react';
 import { TouchableOpacity, View, Text, TextInput } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 
-const Register = (({ login, onRegisterClick }) => {
+//const Register = (({ login: any, onRegisterClick: any }) => {
 
-    return (
+const Register = (login: any, onRegisterClick: any) => () => (
+
         <View style={stylesList().subView}>
             <View style={stylesList().loginTextView}>
                 <Text style={commonStyles.headerTextStyle}>REGISTER</Text>
@@ -41,8 +42,7 @@ const Register = (({ login, onRegisterClick }) => {
                 </View>
             </View>
         </View>
-    );
-})
+)
 
 export default Register;
 

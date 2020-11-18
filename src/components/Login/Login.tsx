@@ -2,8 +2,9 @@ import React from 'react';
 import { TouchableOpacity, View, Text, TextInput, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 
-const Login = (({ register, onLoginClick }) => {
-    return (
+//const Login = (({ register,  }) => {
+//const Login  = ({register: any ,onLoginClick: any}) => {
+const Login = (register: any, onLoginClick: any) => () => (
         <View style={stylesList().subView}>
             <View style={stylesList().loginTextView}>
                 <Text style={commonStyles.headerTextStyle}>LOGIN</Text>
@@ -17,7 +18,7 @@ const Login = (({ register, onLoginClick }) => {
                 </View>
                 <TextInput style={commonStyles.textInputStyle} />
 
-                <TouchableOpacity onPress={() => onLoginClick()} style={commonStyles.loginBtnView}>
+                <TouchableOpacity onPress={ onLoginClick} style={commonStyles.loginBtnView}>
                     <Text style={commonStyles.btnTextStyle}>Login</Text>
                 </TouchableOpacity>
                 <View style={stylesList().newUserView}>
@@ -25,8 +26,8 @@ const Login = (({ register, onLoginClick }) => {
                 </View>
             </View>
         </View>
-    );
-})
+    
+)
 
 
 export default Login;

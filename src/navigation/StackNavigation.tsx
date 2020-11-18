@@ -1,9 +1,12 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import NotesListContainer from '../components/NotesList/NotesListContainer';
+import { NotesListContainer } from '../components/NotesList/NotesListContainer';
 import NotesContainer from '../components/Notes/NotesContianer';
+
+import {FilteredNotesList} from "../components/NotesList/FilteredNotesList";
 import About from "../components/About/About";
-import FilteredNotesList from "../components/NotesList/FilteredNotesList";
+//import { LoginContainer } from "../components/Login/LoginContainer";
+
 
 const Stack = createStackNavigator();
 
@@ -15,6 +18,14 @@ const MainStackNavigator = () => {
     </Stack.Navigator>
   );
 }
+
+const LoginNavigator = () => {
+    return (
+      <Stack.Navigator initialRouteName="LoginContainer" >
+        {/* <Stack.Screen name="LoginContainer" component={LoginContainer} /> */}
+      </Stack.Navigator>
+    );
+  }
 
 const FilteredStackNavigator = () => {
     return (
@@ -32,4 +43,4 @@ const AboutStackNavigator = () => {
     )
 }
 
-export { MainStackNavigator, AboutStackNavigator , FilteredStackNavigator};
+export { MainStackNavigator, AboutStackNavigator, FilteredStackNavigator, LoginNavigator };

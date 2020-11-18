@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, View, Text, TextInput, Button, Keyboard, ScrollView, Switch } from 'react-native';
+import { TouchableOpacity, Platform, KeyboardAvoidingView, TouchableWithoutFeedback, View, Text, TextInput, Button, Keyboard, ScrollView, Switch } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
-// import { Icon } from 'react-native-vector-icons';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function NotesContainer() {
@@ -35,7 +34,7 @@ export default function NotesContainer() {
 
                             <Text style={[commonStyles.mediumText, commonStyles.marginVertical20]}>More Options</Text>
 
-                            <View style={stylesList().moreOptionView}>
+                            <View style={stylesList().subView}>
                                 <Text>Save as alarm</Text>
                                 <Switch 
                                 thumbColor="#fff"

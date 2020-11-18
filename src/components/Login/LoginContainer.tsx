@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import {  KeyboardAvoidingView, TouchableWithoutFeedback, View, Keyboard, ScrollView } from 'react-native';
+import { Platform, KeyboardAvoidingView, TouchableWithoutFeedback, View, Keyboard, ScrollView } from 'react-native';
 import { stylesList } from '../../utils/commonStyles';
+
+import { StackHeaderProps } from '@react-navigation/stack';
 import Login from './Login';
 import Register from './Register';
-
-export default function LoginContainer({ navigation }) {
+//emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} 
+export  const LoginContainer  = ({
+    scene,
+    previous,
+    navigation,
+  }: StackHeaderProps) => {
 
     const [isLoginScreen, setIsLogin] = useState(true)
     const [emailId, setEmailId] = useState('');
@@ -28,11 +34,11 @@ export default function LoginContainer({ navigation }) {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <ScrollView contentContainerStyle={stylesList().scrollViewContainerStyle}>
                     <View style={stylesList().mainView}>
-                        {
+                        {/* {
                          isLoginScreen ? 
-                         <Login register={() => setIsLogin(false)} onLoginClick={() => onLoginClick()} emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} /> : 
+                         <Login register={() => setIsLogin(false)} onLoginClick={() => onLoginClick()} /> : 
                          <Register login={() => setIsLogin(true)} onRegisterClick={() => onRegisterClick() } /> 
-                        }
+                        } */}
                     </View>
                 </ScrollView>
             </TouchableWithoutFeedback>

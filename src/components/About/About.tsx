@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { StackHeaderProps } from '@react-navigation/stack';
 
-export default function About({ navigation }) {
+const About = ({navigation}: StackHeaderProps) => {
+
     return (
         <View style={{flex:1, alignItems:'center'}}>
             <Text>This is the about screen</Text>
-        </View>
-    );
+        </View>)
+    
 }
+
+export default About
