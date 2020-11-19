@@ -2,9 +2,13 @@ import React from 'react';
 import { TouchableOpacity, View, Text, TextInput, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 
-//const Login = (({ register,  }) => {
-//const Login  = ({register: any ,onLoginClick: any}) => {
-const Login = (register: any, onLoginClick: any) => () => (
+export interface Props {
+    register: any ,
+    onLoginClick: any
+}
+
+const Login: React.FC<Props> = ({register, onLoginClick }) => {
+    return (
         <View style={stylesList().subView}>
             <View style={stylesList().loginTextView}>
                 <Text style={commonStyles.headerTextStyle}>LOGIN</Text>
@@ -26,8 +30,8 @@ const Login = (register: any, onLoginClick: any) => () => (
                 </View>
             </View>
         </View>
-    
-)
+    )
+}
 
 
 export default Login;

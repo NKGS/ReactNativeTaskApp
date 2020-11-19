@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import DrawerNavigator from './DrawerNavigation';
-import { AboutStackNavigator } from './StackNavigation';
+import { AboutStackNavigator, LoginNavigator } from './StackNavigation';
 
 export interface Props {
 
@@ -10,7 +10,7 @@ export interface Props {
 const Navigation: React.FC<Props> = (props) => {
     return (
         <NavigationContainer>
-            <DrawerNavigator />
+            <LoginNavigator />
         </NavigationContainer>
     )
 }

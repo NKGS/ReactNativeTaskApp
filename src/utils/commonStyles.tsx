@@ -26,7 +26,8 @@ export default {
    flexPont85: { flex: 0.85 },
    flex1: { flex: 1 },
    marginVertical20: { marginVertical: 20 },
-   trackColor: {true: '#F8CA31', false: '#efefef'}
+   trackColor: {true: '#F8CA31', false: '#efefef'},
+   alignCenterAll: {flex:1, justifyContent:'center', alignItems:'center'}
 }   
 
 export const stylesList = () => StyleSheet.create({

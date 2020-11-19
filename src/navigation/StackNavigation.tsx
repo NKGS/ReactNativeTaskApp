@@ -5,8 +5,7 @@ import NotesContainer from '../components/Notes/NotesContianer';
 
 import {FilteredNotesList} from "../components/NotesList/FilteredNotesList";
 import About from "../components/About/About";
-//import { LoginContainer } from "../components/Login/LoginContainer";
-
+import { LoginContainer } from "../components/Login/LoginContainer";
 
 const Stack = createStackNavigator();
 
@@ -21,8 +20,10 @@ const MainStackNavigator = () => {
 
 const LoginNavigator = () => {
     return (
-      <Stack.Navigator initialRouteName="LoginContainer" >
-        {/* <Stack.Screen name="LoginContainer" component={LoginContainer} /> */}
+      <Stack.Navigator initialRouteName="LoginContainer"  screenOptions={{
+        headerShown: false
+      }}>
+        <Stack.Screen name="LoginContainer" component={LoginContainer} />
       </Stack.Navigator>
     );
   }
