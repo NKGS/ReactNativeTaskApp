@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Platform, KeyboardAvoidingView, TouchableWithoutFeedback, View, Keyboard, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, Platform, PermissionsAndroid, KeyboardAvoidingView, TouchableWithoutFeedback, View, Keyboard, ScrollView } from 'react-native';
 import { stylesList } from '../../utils/commonStyles';
-
 import { StackHeaderProps } from '@react-navigation/stack';
 import Login from './Login';
 import Register from './Register';
+
 
 //emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} 
 

@@ -10,7 +10,8 @@ export interface Props {
 const Navigation: React.FC<Props> = (props) => {
     return (
         <NavigationContainer>
-            <LoginNavigator />
+            {/* <LoginNavigator /> */}
+            <DrawerNavigator />
         </NavigationContainer>
     )
 }
