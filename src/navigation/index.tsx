@@ -4,14 +4,18 @@ import DrawerNavigator from './DrawerNavigation';
 import { AboutStackNavigator, LoginNavigator } from './StackNavigation';
 
 export interface Props {
-
+    isLoggedIn: boolean
 }
 
 const Navigation: React.FC<Props> = (props) => {
+    console.log('props - ',props)
     return (
         <NavigationContainer>
-            {/* <LoginNavigator /> */}
-            <DrawerNavigator />
+            {
+                props.isLoggedIn ? 
+                <DrawerNavigator /> :
+                <LoginNavigator />
+            }
         </NavigationContainer>
     )
 }

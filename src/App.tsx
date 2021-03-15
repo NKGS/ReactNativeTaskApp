@@ -6,15 +6,20 @@
  * @flow strict-local
  */
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useReducer } from 'react';
+import { MyProvider } from './store';
 import Navigation from './navigation';
+import { reducerFunction, initialState } from './reducer';
 
-class App extends React.Component {
-  render() {
-    return (
-      <Navigation />
-    );
-  }
+const App = () => {
+  const [state, dispatch] = useReducer(reducerFunction, initialState);
+
+  return (
+    <MyProvider value={{state, dispatch}}>
+      <Navigation isLoggedIn={state.isLoggedIn} />
+    </MyProvider>
+  );
+
 };
 
 export default App;

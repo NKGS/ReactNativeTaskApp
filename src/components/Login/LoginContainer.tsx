@@ -4,18 +4,24 @@ import { stylesList } from '../../utils/commonStyles';
 import { StackHeaderProps } from '@react-navigation/stack';
 import Login from './Login';
 import Register from './Register';
+import { connect } from '../../store';
+import { useNavigation } from '@react-navigation/native';
 
 
 //emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} 
 
-export  const LoginContainer  = ({navigation, }: StackHeaderProps) => {
+const LoginContainers  = (props) => {
 
-    const [isLoginScreen, setIsLogin] = useState(true)
+    const [isLoginScreen, setIsLogin] = useState(true)  
+    const {navigate} = useNavigation();
     const [emailId, setEmailId] = useState('');
     const [password, setPassword] = useState('');
 
     const onLoginClick = () => {
-        navigation.navigate('NotesListContainer')
+        //props.navigation.navigate('NotesListContainer')
+        //navigate('NotesListContainer')
+       // console.log('value - ',props)
+       props.dispacthLogin("Nikita")
     }
 
     const onRegisterClick = () => {
@@ -44,3 +50,15 @@ export  const LoginContainer  = ({navigation, }: StackHeaderProps) => {
     );
 }
 
+function mapStateToProps(state) {
+    return {
+        books: state.Books
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        dispacthLogin: (payload)=> dispatch({type: 'LOGIN', payload})
+    }
+}
+
+export const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(LoginContainers)
