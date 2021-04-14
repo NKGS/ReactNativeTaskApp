@@ -3,13 +3,14 @@ import {  View, Text } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 import { FlatList } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { StackHeaderProps } from '@react-navigation/stack';
+// import { StackHeaderProps } from '@react-navigation/stack';
 
-    export const FilteredNotesList = ({
-        scene,
-        previous,
-        navigation,
-      }: StackHeaderProps) => {
+//     export const FilteredNotesList = ({
+//         scene,
+//         previous,
+//         navigation,
+//       }: StackHeaderProps) => {
+export const FilteredNotesList = () => {
 
     const [notesList, setNotesList] = useState([{task:"Read type Guidelines", status:"done"},{task:"Complete Responsive Design", status:"done"}, {task:"Bring Grocereis", status:"notdone"}]);
 
@@ -33,7 +34,7 @@ import { StackHeaderProps } from '@react-navigation/stack';
             </View>
 
             <View style={stylesList().notesListFooterView}>
-                <Icon name="md-add-circle" onPress={() => navigation.navigate("NotesContainer")} style={stylesList().iconFontStyle} />
+                <Icon name="md-add-circle" onPress={() => console.log('navigation.navigate("NotesContainer")')} style={stylesList().iconFontStyle} />
             </View>
 
         </View>

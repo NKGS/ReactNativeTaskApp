@@ -1,10 +1,7 @@
-/**
- * @format
- */
+import { Navigation } from 'react-native-navigation';
 
-import './wdyr'
-import {AppRegistry} from 'react-native';
-import App from './src/App';
-import {name as appName} from './app.json';
+import { startApp } from './src/navigation/authFlow';
 
-AppRegistry.registerComponent(appName, () => App);
+Navigation.events().registerAppLaunchedListener(() => {
+    startApp();
+});
