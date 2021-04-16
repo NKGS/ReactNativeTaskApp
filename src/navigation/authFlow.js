@@ -1,8 +1,8 @@
 import { Navigation } from 'react-native-navigation';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
-import Loading from '../components/common/Loading';
-import { reduxProvider } from '../redux';
+import Loading from '../components/Loading';
+import { reduxProvider } from '../redux/index';
 
 const Screens = new Map();
 

@@ -2,10 +2,18 @@ import React, { useState } from 'react';
 import { TouchableOpacity, Platform, KeyboardAvoidingView, TouchableWithoutFeedback, View, Text, TextInput, Button, Keyboard, ScrollView, Switch } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useDispatch } from 'react-redux';
+import { testNaivgation } from '../../redux/actions/login-actions';
 
 export default function NotesContainer() {
 
+    const dispatch = useDispatch();
+
     const [notesList, setNotesList] = useState(true);
+
+    const testNavigationV = () => {
+        dispatch(testNaivgation())
+    }
 
     return (
         <KeyboardAvoidingView
@@ -53,7 +61,7 @@ export default function NotesContainer() {
                         </View>
                         
                         <View style={stylesList().notesListFooterView}>
-                             <Icon name="md-checkmark-circle" style={stylesList().iconFontStyle} />
+                             <Icon name="md-checkmark-circle" onPress={() => testNavigationV()} style={stylesList().iconFontStyle} />
                         </View>
                     </View>
                 </ScrollView>

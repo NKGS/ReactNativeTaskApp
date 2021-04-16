@@ -4,14 +4,15 @@ import commonStyles, { stylesList } from '../../utils/commonStyles';
 
 export interface Props {
     register: any ,
-    onLoginClick: any
+    onLoginClick: any,
+    user: any
 }
 
-const Login: React.FC<Props> = ({register, onLoginClick }) => {
+const Login: React.FC<Props> = ({user, register, onLoginClick }) => {
     return (
         <View style={stylesList().subView}>
             <View style={stylesList().loginTextView}>
-                <Text style={commonStyles.headerTextStyle}>LOGIN</Text>
+    <Text style={commonStyles.headerTextStyle}>LOGIN {user ? user.name : ''}</Text>
             </View>
             <View style={stylesList().loginFormView}>
                 <Text style={commonStyles.mediumText}>Email</Text>
@@ -22,7 +23,7 @@ const Login: React.FC<Props> = ({register, onLoginClick }) => {
                 </View>
                 <TextInput style={commonStyles.textInputStyle} />
 
-                <TouchableOpacity onPress={ onLoginClick} style={commonStyles.loginBtnView}>
+                <TouchableOpacity onPress={() => onLoginClick()} style={commonStyles.loginBtnView}>
                     <Text style={commonStyles.btnTextStyle}>Login</Text>
                 </TouchableOpacity>
                 <View style={stylesList().newUserView}>

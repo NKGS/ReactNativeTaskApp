@@ -1,11 +1,11 @@
 import { Navigation } from 'react-native-navigation';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
-import LoginContainers from './../components/Login/LoginContainer';
-import { reduxProvider } from '../redux';
+import LoginContainer from './../components/Login/LoginContainer';
+import { reduxProvider } from '../redux/index';
 
 const Screens = new Map()
 
-Screens.set('auth', LoginContainers);
+Screens.set('auth', LoginContainer);
 
 // Register screens
 Screens.forEach((C, key) => {

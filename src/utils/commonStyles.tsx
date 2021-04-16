@@ -10,10 +10,11 @@ export default {
         borderWidth: 1, borderRadius: 8, marginVertical: 8, borderColor: '#F8CA31' 
     },
     loginBtnView: { 
-        height: 58, maxHeight: 50, marginVertical: 18, borderRadius:8, backgroundColor: '#F8CA31'
+        flex:1, alignItems: 'center', justifyContent:'center',
+        height: 58, maxHeight: 50, marginVertical: 18, borderRadius:8, backgroundColor: '#F8CA31', borderWidth:2
     },
     btnTextStyle: { 
-        fontSize: 14, color: 'white' 
+        fontSize: 20, color: 'white'
     },
     userRegisterTextStyle:{ 
         fontSize: 13, color: '#3B3B3B',  borderBottomWidth: 1 

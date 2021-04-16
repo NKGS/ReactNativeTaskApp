@@ -41,3 +41,5 @@ export const NotesListContainer = () => {
     );
 }
 
+export default NotesListContainer;
+

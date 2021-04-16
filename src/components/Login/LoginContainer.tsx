@@ -4,10 +4,17 @@ import { stylesList } from '../../utils/commonStyles';
 import Login from './Login';
 import Register from './Register';
 import { connect } from '../../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginAction } from '../../redux/actions/login-actions';
+import { startApp } from '../../App';
 // import { useNavigation } from '@react-navigation/native';
 //emailId={emailId} password={password} setEmailId={(val) => setEmailId(val) } setPassword={(val) => setPassword(val)} 
 
-const LoginContainers  = (props) => {
+const LoginContainer  = (props) => {
+
+    const dispatch = useDispatch();
+
+    const user = useSelector(state => state.login.user);
 
     const [isLoginScreen, setIsLogin] = useState(true)  
     //const {navigate} = useNavigation();
@@ -15,15 +22,19 @@ const LoginContainers  = (props) => {
     const [password, setPassword] = useState('');
 
     const onLoginClick = () => {
-        //props.navigation.navigate('NotesListContainer')
-        //navigate('NotesListContainer')
-       // console.log('value - ',props)
-       props.dispacthLogin("Nikita")
+      dispatch(loginAction('mk'))
+      console.log('asas')
     }
 
     const onRegisterClick = () => {
         alert("User addedd successfullly!!")
     }
+    
+    useEffect(() => {
+        if (user && user.name) {
+            startApp();
+        }
+    })
 
     return (
         <KeyboardAvoidingView
@@ -37,7 +48,7 @@ const LoginContainers  = (props) => {
                     <View style={stylesList().mainView}>
                         {
                          isLoginScreen ? 
-                         <Login register={() => setIsLogin(false)} onLoginClick={() => onLoginClick()} /> : 
+                         <Login user={user} register={() => setIsLogin(false)} onLoginClick={() => onLoginClick()} /> : 
                          <Register login={() => setIsLogin(true)} onRegisterClick={() => onRegisterClick() } /> 
                         }
                     </View>
@@ -59,4 +70,4 @@ const LoginContainers  = (props) => {
 // }
 
 // export const LoginContainer = connect(mapStateToProps, mapDispatchToProps)(LoginContainers)
-export default LoginContainers;
+export default LoginContainer;

@@ -1,9 +1,9 @@
 
-import { all } from 'redux-saga/effects';
+import { all, fork } from 'redux-saga/effects';
+import login from './login.saga';
 
 export function* saga() {
     yield all([
-        //fetchSaga()
-        // some more
+        yield fork(login)
     ]);
 }
