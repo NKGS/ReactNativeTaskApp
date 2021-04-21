@@ -1,0 +1,399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Login correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+      "width": "80%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.2,
+        "justifyContent": "flex-end",
+        "marginBottom": 30,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3B3B3B",
+          "fontSize": 20,
+        }
+      }
+    >
+      LOGIN 
+      
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0.8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3B3B3B",
+          "fontSize": 12,
+        }
+      }
+    >
+      Email
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "marginVertical": 8,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#3B3B3B",
+            "fontSize": 12,
+          }
+        }
+      >
+        Password
+      </Text>
+    </View>
+    <TextInput
+      allowFontScaling={true}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "marginVertical": 8,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "flex": 1,
+          "height": 58,
+          "justifyContent": "center",
+          "marginVertical": 18,
+          "maxHeight": 50,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 20,
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "color": "#3B3B3B",
+            "fontSize": 13,
+          }
+        }
+      >
+        New User? Register Here
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders Registrer correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+      "width": "80%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.2,
+        "justifyContent": "flex-end",
+        "marginBottom": 30,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3B3B3B",
+          "fontSize": 20,
+        }
+      }
+    >
+      REGISTER
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0.8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3B3B3B",
+          "fontSize": 12,
+        }
+      }
+    >
+      Email
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "marginVertical": 8,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#3B3B3B",
+            "fontSize": 12,
+          }
+        }
+      >
+        Password
+      </Text>
+    </View>
+    <TextInput
+      allowFontScaling={true}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "marginVertical": 8,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#3B3B3B",
+            "fontSize": 12,
+          }
+        }
+      >
+        Confirm Password
+      </Text>
+    </View>
+    <TextInput
+      allowFontScaling={true}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "marginVertical": 8,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F8CA31",
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "flex": 1,
+          "height": 58,
+          "justifyContent": "center",
+          "marginVertical": 18,
+          "maxHeight": 50,
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text>
+          Register
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#3B3B3B",
+            "fontSize": 12,
+          }
+        }
+      >
+        By registering, you automatically
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#3B3B3B",
+              "fontSize": 12,
+            }
+          }
+        >
+          accept the
+        </Text>
+        <Text
+          style={
+            Object {
+              "borderBottomWidth": 1,
+              "color": "#3B3B3B",
+              "fontSize": 13,
+            }
+          }
+        >
+          Terms & Policies
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3B3B3B",
+              "fontSize": 12,
+            }
+          }
+        >
+          of
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#3B3B3B",
+            "fontSize": 12,
+          }
+        }
+      >
+        candy app.
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "marginTop": 10,
+          },
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "marginVertical": 30,
+          },
+        ]
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "borderBottomWidth": 1,
+            "color": "#3B3B3B",
+            "fontSize": 13,
+          }
+        }
+      >
+        Have account? Log In
+      </Text>
+    </View>
+  </View>
+</View>
+`;

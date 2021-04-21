@@ -5,8 +5,6 @@
  * @format
  * @flow strict-local
  */
-import 'react-native-gesture-handler';
-import React, { useReducer, useEffect } from 'react';
 import { Navigation } from 'react-native-navigation';
 import LoginContainer from './components/Login/LoginContainer';
 import NotesContainer from './components/Notes/NotesContianer';

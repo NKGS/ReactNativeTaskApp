@@ -21,6 +21,7 @@ export default function NotesContainer() {
             style={stylesList().container}
             enabled
             keyboardVerticalOffset={90}
+            testID="notes-container"
         >
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <ScrollView contentContainerStyle={stylesList().scrollViewContainerStyle}>

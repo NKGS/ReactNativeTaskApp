@@ -3,16 +3,16 @@ import { TouchableOpacity, View, Text, TextInput, TouchableWithoutFeedback, Touc
 import commonStyles, { stylesList } from '../../utils/commonStyles';
 
 export interface Props {
-    register: any ,
+    register: any,
     onLoginClick: any,
     user: any
 }
 
-const Login: React.FC<Props> = ({user, register, onLoginClick }) => {
+const Login: React.FC<Props> = ({ user, register, onLoginClick }) => {
     return (
         <View style={stylesList().subView}>
             <View style={stylesList().loginTextView}>
-    <Text style={commonStyles.headerTextStyle}>LOGIN {user ? user.name : ''}</Text>
+                <Text style={commonStyles.headerTextStyle}>LOGIN {user ? user.name : ''}</Text>
             </View>
             <View style={stylesList().loginFormView}>
                 <Text style={commonStyles.mediumText}>Email</Text>
@@ -23,11 +23,11 @@ const Login: React.FC<Props> = ({user, register, onLoginClick }) => {
                 </View>
                 <TextInput style={commonStyles.textInputStyle} />
 
-                <TouchableOpacity onPress={() => onLoginClick()} style={commonStyles.loginBtnView}>
+                <TouchableOpacity testID="login-btn" onPress={() => onLoginClick()} style={commonStyles.loginBtnView}>
                     <Text style={commonStyles.btnTextStyle}>Login</Text>
                 </TouchableOpacity>
                 <View style={stylesList().newUserView}>
-                        <Text  onPress={() => register()} style={commonStyles.userRegisterTextStyle}>New User? Register Here</Text>
+                    <Text onPress={() => register()} style={commonStyles.userRegisterTextStyle}>New User? Register Here</Text>
                 </View>
             </View>
         </View>
