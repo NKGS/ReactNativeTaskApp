@@ -7,7 +7,7 @@ This is a demo app to kickstart development using following libraries:
   * react-navigation
 
 
-To check app with below libraries check **feature/** branch:
+To check app with below libraries check **[feature/native-navigation](https://github.com/NKGS/ReactNativeTaskApp/tree/feature/native-navigation)** branch:
 
   * react-native-navigation
   * detox
