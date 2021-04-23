@@ -7,6 +7,6 @@ This is a demo app to kickstart development using following libraries:
   * react-native-navigation
   * detox
   * jest
-  * styles-components
+  * styled-components
   * redux
   * saga
