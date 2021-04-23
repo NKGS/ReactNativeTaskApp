@@ -41,7 +41,7 @@ const Register: React.FC<Props> = ({ login, onRegisterClick }):  JSX.Element => 
                 </View>
                 <TextInput style={commonStyles.textInputStyle} />
 
-                <TouchableOpacity onPress={() => onRegisterClick()} style={commonStyles.loginBtnView}>
+                <TouchableOpacity onPress={() => onRegisterClick()} style={stylesList().loginBtnView}>
                     <View style={styles.button}>
                         <Text>Register</Text>
                     </View>

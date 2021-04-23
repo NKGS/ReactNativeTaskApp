@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, TextInput, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
 import commonStyles, { stylesList } from '../../utils/commonStyles';
+import { RegularText } from '../Basic/Basic';
 
 export interface Props {
     register: any,
@@ -23,16 +24,20 @@ const Login: React.FC<Props> = ({ user, register, onLoginClick }) => {
                 </View>
                 <TextInput style={commonStyles.textInputStyle} />
 
-                <TouchableOpacity testID="login-btn" onPress={() => onLoginClick()} style={commonStyles.loginBtnView}>
-                    <Text style={commonStyles.btnTextStyle}>Login</Text>
+                <TouchableOpacity style={stylesList().loginBtnView} testID="login-btn" onPress={() => onLoginClick()} >
+                    {/* <Text style={commonStyles.btnTextStyle}>Login</Text> */}
+                    <RegularText>Login</RegularText>
                 </TouchableOpacity>
+
                 <View style={stylesList().newUserView}>
-                    <Text onPress={() => register()} style={commonStyles.userRegisterTextStyle}>New User? Register Here</Text>
+                    {/* <Text onPress={() => register()} style={commonStyles.userRegisterTextStyle}>New User? Register Here</Text> */}
+                    <RegularText onPress={()=> register() }>New User? Register Here</RegularText>
                 </View>
             </View>
         </View>
     )
 }
+
 
 
 export default Login;

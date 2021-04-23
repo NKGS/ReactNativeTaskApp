@@ -3,7 +3,6 @@ import { Text, Platform, PermissionsAndroid, KeyboardAvoidingView, TouchableWith
 import { stylesList } from '../../utils/commonStyles';
 import Login from './Login';
 import Register from './Register';
-import { connect } from '../../store';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginAction } from '../../redux/actions/login-actions';
 import { startApp } from '../../App';

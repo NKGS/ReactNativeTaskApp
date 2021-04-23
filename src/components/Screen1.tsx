@@ -4,6 +4,7 @@ import AnimatedHeader from './Header/AnimatedHeader';
 import DATA from '../data';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
+
 const Screen1 = () => {
     const offset = useRef(new Animated.Value(0)).current;
     return (
